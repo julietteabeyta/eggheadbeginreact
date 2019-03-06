@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+  <script type="text/javascript">
+
+    const rootElement = document.getElementById('root');
+
+    //This is how we would do this with vanilla JS
+    // const element = document.createElement('div');
+    // element.textContent = 'Hello World';
+    // element.className = 'container';
+    // rootElement.appendChild(element);
+
+    //This is how we will do it using react and reactdom
+
+    //React.createElement is just the type of element that you
+    //want to create, then an object of props you want to apply
+    const element = React.createElement('div', {className: 'container', children: 'Goodbye World'});
+    ReactDOM.render(element, rootElement);
+
+    console.log('this is our element: ', element);
+
+  </script>
+</body>
+</html>

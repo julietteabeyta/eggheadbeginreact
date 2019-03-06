@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 2, JSX Too!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <!-- Now that we are going to be using babel we need to change this from text/javascript to text/babel -->
+  <script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+    //We are going to use babel to compile jsx woo
+    const props ={
+      className: 'container',
+      children: 'Goodbye World (but this time with JSX)',
+    }
+    //We will apply those props here-- keep in mind that the props
+    //object will override all custom props of the same type *preceeding* it
+    const element = <div {...props} />
+    ReactDOM.render(element, rootElement);
+
+    //End challenge:
+    // React.createElement(
+    //   'div',
+    //   {id: 'greeting', className: 'active', children: ['Hello, ', user.name]},
+    // )
+
+  </script>
+</body>
+</html>
